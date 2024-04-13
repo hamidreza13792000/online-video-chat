@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.my_class {
+    resize:both;
+    overflow:auto; /* something other than visible */
+    scrollbar-width: none; 
+}

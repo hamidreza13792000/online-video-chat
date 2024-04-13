@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/output.css" rel="stylesheet" />
+    <title>socket.io</title>
+</head>
+
+<body class="overflow-hidden ">
+
+        <h1 class="text-center p-[10px] xm:text-[15px] sm:text-[20px] lg:text-[30px] font-bold">app video chat</h1>
+
+    <div class="p-[10px]">
+        <div class="bg-blue-400 blur-lg absolute w-full h-full">
+        </div>
+        <!-- ============================================================================================ -->
+        <div class="container m-auto flex justify-between xm:flex-col lg:flex-row">
+
+            <div class="border-2 lg:w-[60vh] relative flex justify-center items-center flex-col rounded-xl bg-blue-500">
+
+                <div
+                    class=" border-2 w-[95%] flex justify-start items-center flex-col p-[5px] rounded-lg bg-yellow-100">
+
+                    <div class="flex justify-start items-center xm:flex-col lg:flex-row">
+
+                        <label for="inputSocketID" class="lg:mr-[5px] text-[12px] xl:text-[15px] 2xl:text-[20px]">your id address :</label>
+                        <div class="flex justify-start items-center flex-row">
+                            <input type="text" value="your_id_address" id="inputSocketID" class="border-2 border-solid rounded-lg p-[5px]" /><br><br>
+                            <span id="iconcopy" class="ml-2 cursor-pointer" title="copy">
+                                <?xml version="1.0" ?><svg class="feather feather-copy" fill="none" height="24"
+                                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                    <rect height="13" rx="2" ry="2" width="13" x="9" y="9" />
+                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+                                </svg>
+                            </span>
+                        </div>
+                        
+                    </div>
+                    <br>
+                    <div class="flex justify-start items-center xm:flex-col lg:flex-row">
+                        <label for="inputsendsocketID" class="mr-[5px] text-[12px] xl:text-[15px] 2xl:text-[20px]"> id address owner :</label>
+                        <input type="text" value="inputsendsocketID" id="inputsendsocketID"
+                            class="border-2 border-solid rounded-lg p-[5px]"><br>
+                    </div>
+
+                    <br>
+                    <button id="btnchat" class="border-2 w-[95%] p-[5px] mb-[-20px] rounded-lg bg-blue-400">click for
+                        chate video</button><br>
+
+                </div>
+
+            </div>
+
+            <!-- ======================= -->
+            <div class=" lg:w-[110vh] h-auto relative my_class rounded-lg border-2">
+                <video id="videouser1" class=" absolute left-0 bottom-0 w-[20%] h-[28%]"></video>
+                <video id="videouser2" class="border-2 w-full h-full"></video>
+            </div>
+
+        </div>
+        <!-- ========================================================================== -->
+    </div>
+
+</body>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="./js/ui.js" type="module"></script>
+<script src="./js/main.js" type="module"></script>
+
+</html>
